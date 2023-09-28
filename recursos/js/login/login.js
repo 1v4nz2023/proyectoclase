@@ -7,7 +7,7 @@ let userValidate=localStorage.getItem("userlogged");
 let codValidate=localStorage.getItem("userCod");
 let dniValidate=localStorage.getItem("userDni");
 
-if (window.location != "http://127.0.0.1:5500/index.html"){
+if (window.location != "../../../index.html"){
     
     if(userValidate==="blank" && codValidate==="blank" && dniValidate==="blank"){
         Swal.fire({
@@ -22,7 +22,7 @@ if (window.location != "http://127.0.0.1:5500/index.html"){
             confirmButtonText: 'OK',
           })
           setTimeout(function(){
-            window.location = "/index.html";
+            window.location = "../../../index.html";
             ;
           }, 2000);
     }
