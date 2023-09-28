@@ -1,8 +1,33 @@
 
 $(document).ready(function () {
     getUserSession();
- 
 });
+
+let userValidate=localStorage.getItem("userlogged");
+let codValidate=localStorage.getItem("userCod");
+let dniValidate=localStorage.getItem("userDni");
+
+if (window.location != "http://127.0.0.1:5500/index.html"){
+    
+    if(userValidate==="blank" && codValidate==="blank" && dniValidate==="blank"){
+        Swal.fire({
+            customClass: {
+                confirmButton: 'confirm-button-class2',
+                title: 'title-class',
+                icon: 'icon-class'
+              },   
+            title: 'Error de inicio de sesión',
+            text: 'Por favor inicie sesión',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          })
+          setTimeout(function(){
+            window.location = "/index.html";
+            ;
+          }, 2000);
+    }
+}
+
 
 
 $(".finit").on('click', function () {
@@ -154,6 +179,29 @@ function getUserSession(){
 }
 
 
+
+function endSession(){
+    
+}
+
+$( "#endSesion" ).on( "click", function() {
+    Swal.fire({
+        title: '¿Realmente deseas cerrar la sesión?',
+        showDenyButton: true,
+        confirmButtonText: 'Sí',
+        denyButtonText: `No`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Cerraste sesión');
+          localStorage.setItem("userlogged","blank");
+          localStorage.setItem("userCod","blank");
+          localStorage.setItem("userDni","blank");
+          window.location = "/index.html";
+
+        }
+      })
+  });
 
 var lista_Usuario = [
     {

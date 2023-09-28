@@ -5,25 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Capacitaciones</title>
     <link rel="stylesheet" href="/recursos/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../recursos/css/style.css">
     <script src="/recursos/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
-<body class="container py-5">
-    <div>
-        <h2>Bandeja de Programas</h2>
+<body >
 
-    </div>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Proyect</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#" id="endSesion">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>
 
-<div><h3 id="titulo">Bienvenido</h3>
-     <h3 id="codigo">Código</h3>
-     <h3 id="dni">Dni</h3>
-</div>
-
-
-    <div>
+<main>
+    <div class="container py-5 bandeja">
+        <h2 id="programa">BANDEJA DE PROGRAMAS</h2>
+        <div class="contenedor_sesion"><h3 id="titulo">BIENVENIDO</h3>
+            <h3 id="codigo">CÓDIGO</h3>
+            <h3 id="dni">DNI</h3>
+       </div>
+       <br>
+       <div>
         <!--Crear tabla-->
+        <table id="myTable" class="display responsive no-wrap contenedor_tablas" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Cod_Programa</th>
+                    <th>Nombre_Programa</th>
+                    <th>Nro_Cursos</th>
+                    <th>Fecha_inicio</th>
+                    <th>Fecha_Fin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>202320-10059-P65-TE</td>
+                    <td>DES Y SOP DE APLIC MULTIPLATAF </td>
+                    <td>2</td>
+                    <td>01/10/2023</td>
+                    <td>06/12/2023</td>
+                </tr>
+                <tr>
+                    <td>202320-10007-H58-TE</td>
+                    <td>ALGORITMOS PARA LA SOL DE PROB</td>
+                    <td>1</td>
+                    <td>01/10/2023</td>
+                    <td>29/10/2023</td>
+                </tr>
+                <tr>
+                    <td>202320-10173-H65-TE</td>
+                    <td>INFRAEST, PLATAFOR Y SER DE TI</td>
+                    <td>3</td>
+                    <td>01/10/2023</td>
+                    <td>24/12/2023</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    </div>
+</main>
+
+<footer>
+    Grupo 3 - DESARROLLO Y SOPORTE MULTIPLATAFORMA 
+</footer>
+
+
+
+    
     <script src="/recursos/js/login/login.js"></script>
     <script src="/recursos/bootstrap/bootstrap.min.js"></script>
     <script src="/recursos/bootstrap/popper.min.js"></script>

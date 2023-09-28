@@ -14,6 +14,11 @@
     justify-content: center;
 }
 
+.userimg{
+    width: 20%;
+    margin-top: 2rem;
+}
+
 .formulario{
 background-color: rgba(142, 173, 163, 0.808);
 display: flex;
@@ -22,6 +27,7 @@ align-items: center;
 justify-content: center;
 border-radius:10px;
 min-height: 450px;
+box-shadow: 6px 20px 10px black;
 }
 
 .text{
@@ -40,6 +46,34 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_tablas{
+    background-color: rgba(142, 173, 163, 0.808);;
+    border-radius: 1rem;
+}
+
+.contenedor_sesion{
+    background-color: rgba(142, 173, 163, 0.808);;
+    border-radius: 1rem;
+    padding: 10px;
+
+}
+
+#programa{
+    text-align: center;
+}
+
+.bandeja{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    background-color:#c1e6cc;
+    border-radius: 20px;
+    box-shadow: 6px 20px 10px black;
 }
 
 @media (max-width: 400px) {
