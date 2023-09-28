@@ -197,8 +197,7 @@ $( "#endSesion" ).on( "click", function() {
           localStorage.setItem("userlogged","blank");
           localStorage.setItem("userCod","blank");
           localStorage.setItem("userDni","blank");
-          window.location = "/index.html";
-
+          window.location = "https://1v4nz2023.github.io/proyectoclase/";
         }
       })
   });
